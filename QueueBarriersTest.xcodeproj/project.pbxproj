@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8C7ECA7A2378829D004190F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA792378829D004190F4 /* AppDelegate.swift */; };
-		8C7ECA7C2378829D004190F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA7B2378829D004190F4 /* SceneDelegate.swift */; };
 		8C7ECA7E2378829D004190F4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA7D2378829D004190F4 /* FirstViewController.swift */; };
 		8C7ECA802378829D004190F4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA7F2378829D004190F4 /* SecondViewController.swift */; };
 		8C7ECA832378829D004190F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7ECA812378829D004190F4 /* Main.storyboard */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		8C7ECA762378829D004190F4 /* QueueBarriersTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueBarriersTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7ECA792378829D004190F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C7ECA7B2378829D004190F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8C7ECA7D2378829D004190F4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		8C7ECA7F2378829D004190F4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8C7ECA822378829D004190F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				8C7ECA892378829E004190F4 /* Info.plist */,
 				8C7ECA862378829E004190F4 /* LaunchScreen.storyboard */,
 				8C7ECA812378829D004190F4 /* Main.storyboard */,
-				8C7ECA7B2378829D004190F4 /* SceneDelegate.swift */,
 				8C7ECA7F2378829D004190F4 /* SecondViewController.swift */,
 			);
 			path = QueueBarriersTest;
@@ -176,7 +173,6 @@
 				8C7ECA9023789BC0004190F4 /* TaskQueue.swift in Sources */,
 				8C7ECA9523789C5F004190F4 /* DispatchBarrierQueue.swift in Sources */,
 				8C7ECA7A2378829D004190F4 /* AppDelegate.swift in Sources */,
-				8C7ECA7C2378829D004190F4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
