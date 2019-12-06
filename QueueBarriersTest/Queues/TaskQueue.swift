@@ -6,7 +6,24 @@
 //  Copyright © 2019 Kuba Suder. All rights reserved.
 //
 
-protocol TaskQueue {
-    func addTask(_ block: @escaping () -> ())
-    func runWhenFinished(_ block: @escaping () -> ())
+import Foundation
+
+protocol TaskQueue: class {
+    var tasks: [Task] { get }
+    var delegate: TaskQueueDelegate? { get set }
+    var specialTaskName: String { get }
+
+    init()
+
+    func addTask(_ task: Task)
+}
+
+protocol TaskQueueDelegate: class {
+    func taskAdded(_ task: Task)
+    func taskFinished(_ task: Task)
+}
+
+extension TaskQueueDelegate {
+    func taskAdded(_ task: Task) {}
+    func taskFinished(_ task: Task) {}
 }

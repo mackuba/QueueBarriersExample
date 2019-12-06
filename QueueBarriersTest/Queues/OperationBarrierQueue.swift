@@ -10,12 +10,32 @@ import Foundation
 
 class OperationBarrierQueue: TaskQueue {
     let queue = OperationQueue()
+    var tasks: [Task] = []
+    weak var delegate: TaskQueueDelegate?
 
-    func addTask(_ block: @escaping () -> ()) {
-        queue.addOperation(block)
+    var specialTaskName: String {
+        return "Blocking Task"
     }
 
-    func runWhenFinished(_ block: @escaping () -> ()) {
-        queue.addBarrierBlock(block)
+    required init() {}
+
+    func addTask(_ task: Task) {
+        task.register()
+        tasks.append(task)
+        delegate?.taskAdded(task)
+
+        if task.isBlocking {
+            queue.addBarrierBlock {
+                task.run()
+                self.tasks.removeAll(where: { $0 == task })
+                self.delegate?.taskFinished(task)
+            }
+        } else {
+            queue.addOperation {
+                task.run()
+                self.tasks.removeAll(where: { $0 == task })
+                self.delegate?.taskFinished(task)
+            }
+        }
     }
 }

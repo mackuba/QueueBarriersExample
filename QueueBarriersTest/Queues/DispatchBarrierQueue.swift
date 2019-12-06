@@ -10,16 +10,34 @@ import Foundation
 
 class DispatchBarrierQueue: TaskQueue {
     let queue: DispatchQueue
+    var tasks: [Task] = []
+    weak var delegate: TaskQueueDelegate?
 
-    init() {
+    var specialTaskName: String {
+        return "Blocking Task"
+    }
+
+    required init() {
         queue = DispatchQueue(label: "DispatchBarrierQueue", qos: .userInitiated, attributes: .concurrent)
     }
 
-    func addTask(_ block: @escaping () -> ()) {
-        queue.async(execute: block)
-    }
+    func addTask(_ task: Task) {
+        task.register()
+        tasks.append(task)
+        delegate?.taskAdded(task)
 
-    func runWhenFinished(_ block: @escaping () -> ()) {
-        queue.async(qos: .userInitiated, flags: .barrier, execute: block)
+        if task.isBlocking {
+            queue.async(qos: .userInitiated, flags: .barrier) {
+                task.run()
+                self.tasks.removeAll(where: { $0 == task })
+                self.delegate?.taskFinished(task)
+            }
+        } else {
+            queue.async {
+                task.run()
+                self.tasks.removeAll(where: { $0 == task })
+                self.delegate?.taskFinished(task)
+            }
+        }
     }
 }

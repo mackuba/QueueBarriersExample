@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C7ECA7A2378829D004190F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA792378829D004190F4 /* AppDelegate.swift */; };
-		8C7ECA7E2378829D004190F4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA7D2378829D004190F4 /* FirstViewController.swift */; };
-		8C7ECA802378829D004190F4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA7F2378829D004190F4 /* SecondViewController.swift */; };
+		8C7ECA7E2378829D004190F4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA7D2378829D004190F4 /* ListViewController.swift */; };
 		8C7ECA832378829D004190F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7ECA812378829D004190F4 /* Main.storyboard */; };
 		8C7ECA852378829E004190F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7ECA842378829E004190F4 /* Assets.xcassets */; };
 		8C7ECA882378829E004190F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7ECA862378829E004190F4 /* LaunchScreen.storyboard */; };
@@ -18,14 +17,14 @@
 		8C7ECA9523789C5F004190F4 /* DispatchBarrierQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA9423789C5F004190F4 /* DispatchBarrierQueue.swift */; };
 		8C7ECA9723789C87004190F4 /* OperationBarrierQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA9623789C87004190F4 /* OperationBarrierQueue.swift */; };
 		8C7ECA992378A02E004190F4 /* TaskFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA982378A02E004190F4 /* TaskFactory.swift */; };
+		8C7ECA9B2378C06F004190F4 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA9A2378C06F004190F4 /* TaskCell.swift */; };
 		8C7ECA9D2378CC27004190F4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7ECA9C2378CC27004190F4 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C7ECA762378829D004190F4 /* QueueBarriersTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueBarriersTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7ECA792378829D004190F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C7ECA7D2378829D004190F4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8C7ECA7F2378829D004190F4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8C7ECA7D2378829D004190F4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		8C7ECA822378829D004190F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C7ECA842378829E004190F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C7ECA872378829E004190F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +34,7 @@
 		8C7ECA9423789C5F004190F4 /* DispatchBarrierQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchBarrierQueue.swift; sourceTree = "<group>"; };
 		8C7ECA9623789C87004190F4 /* OperationBarrierQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBarrierQueue.swift; sourceTree = "<group>"; };
 		8C7ECA982378A02E004190F4 /* TaskFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFactory.swift; sourceTree = "<group>"; };
+		8C7ECA9A2378C06F004190F4 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		8C7ECA9C2378CC27004190F4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,11 +71,11 @@
 				8C7ECA9123789BC8004190F4 /* Queues */,
 				8C7ECA792378829D004190F4 /* AppDelegate.swift */,
 				8C7ECA842378829E004190F4 /* Assets.xcassets */,
-				8C7ECA7D2378829D004190F4 /* FirstViewController.swift */,
 				8C7ECA892378829E004190F4 /* Info.plist */,
 				8C7ECA862378829E004190F4 /* LaunchScreen.storyboard */,
+				8C7ECA7D2378829D004190F4 /* ListViewController.swift */,
 				8C7ECA812378829D004190F4 /* Main.storyboard */,
-				8C7ECA7F2378829D004190F4 /* SecondViewController.swift */,
+				8C7ECA9A2378C06F004190F4 /* TaskCell.swift */,
 			);
 			path = QueueBarriersTest;
 			sourceTree = "<group>";
@@ -164,11 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C7ECA802378829D004190F4 /* SecondViewController.swift in Sources */,
 				8C7ECA9323789C1B004190F4 /* DispatchGroupQueue.swift in Sources */,
-				8C7ECA7E2378829D004190F4 /* FirstViewController.swift in Sources */,
+				8C7ECA7E2378829D004190F4 /* ListViewController.swift in Sources */,
 				8C7ECA9723789C87004190F4 /* OperationBarrierQueue.swift in Sources */,
 				8C7ECA9D2378CC27004190F4 /* Task.swift in Sources */,
+				8C7ECA9B2378C06F004190F4 /* TaskCell.swift in Sources */,
 				8C7ECA992378A02E004190F4 /* TaskFactory.swift in Sources */,
 				8C7ECA9023789BC0004190F4 /* TaskQueue.swift in Sources */,
 				8C7ECA9523789C5F004190F4 /* DispatchBarrierQueue.swift in Sources */,
