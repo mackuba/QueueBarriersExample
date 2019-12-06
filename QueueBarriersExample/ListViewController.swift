@@ -48,7 +48,7 @@ class ListViewController: UIViewController, TaskQueueDelegate {
         queue.delegate = self
         self.queue = queue
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: .milliseconds(100))) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now().advanced(by: .milliseconds(500))) {
             let factory = TaskFactory(queue: queue)
             factory.runScenario()
         }
