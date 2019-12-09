@@ -56,12 +56,39 @@ dispatchQueue.async {
 }
 ```
 
+You can use `enter()` and `leave()` with any blocks of code you run asynchronously, e.g. when running some downloads:
+
+```swift
+for url in urls {
+    dispatchGroup.enter()
+
+    downloadFile(url) { response in
+        // ...
+        dispatchGroup.leave()
+    }
+}
+```
+
 To set up a callback to be run when the queue is empty, use the `notify()` method:
 
 ```swift
 let dispatchGroup = DispatchGroup()
 
+// run some tasks
+
 dispatchGroup.notify(queue: queue) {
     // do some cleanup after all tasks have finished
 }
+```
+
+You can also block the current thread and wait until all tasks finish (possibly with a timeout):
+
+```swift
+let dispatchGroup = DispatchGroup()
+
+// run some tasks
+
+dispatchGroup.wait()
+
+// continue when work is done
 ```
